@@ -1,0 +1,7 @@
+.navbar-brand{
+    color: yellow;
+    font-size: 30px;
+    font-weight: bold;
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: blue;
+}
