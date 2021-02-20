@@ -8,6 +8,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
+import { PokemonService } from './pokemon.service';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,7 @@ import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [PokemonService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
