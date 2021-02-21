@@ -2,12 +2,14 @@
   <table class="table table-hover">
     <thead>
       <tr>
-        <th>Name</th>
+        <th style="width: 80%;">Name</th>
+        <th></th>
       </tr>
     </thead>
     <tbody>
       <tr *ngFor="let pokemon of pokemonList">
         <td>{{ pokemon.name }}</td>
+        <td><a class="btn btn-primary" [routerLink]="['/pokemon', pokemon.name]">Details</a></td>
       </tr>
     </tbody>
   </table>

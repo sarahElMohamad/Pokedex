@@ -9,13 +9,15 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { PokemonListComponent } from './pokemon-list/pokemon-list.component';
 import { PokemonService } from './pokemon.service';
+import { PokemonDetailComponent } from './pokemon-detail/pokemon-detail.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    PokemonListComponent
+    PokemonListComponent,
+    PokemonDetailComponent
   ],
   imports: [
     AppRoutingModule,

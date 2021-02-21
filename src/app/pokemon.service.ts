@@ -14,4 +14,10 @@ export class PokemonService {
 
   }
 
+  public getPokemonDetail(name:string){
+    return this.http.get('https://pokeapi.co/api/v2/pokemon/'+ name + '')
+    .toPromise()
+    .then((res:Response) => res.json());
+  }
+
 }
