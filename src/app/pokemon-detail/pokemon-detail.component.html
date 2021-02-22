@@ -1,3 +1,45 @@
-<p>
-  pokemon-detail works! {{pokemon.id}} - {{pokemon.name}}
-</p>
+<div class="container">
+  <a class="btn btn-primary" style="margin-bottom: 20px;" [routerLink]="['/pokemon-list']">Back to list</a>
+  <div class="card">
+    <h3 class="card-header card-title">{{pokemon.name}}</h3>
+    <div class="card-body">
+
+      <div style="margin-left: 5%">
+
+        <div class="row">
+
+          <div class="col-md-6">
+            <h5>TYPES: </h5>
+            <ul>
+              <li *ngFor="let type of pokemon.types">{{type}}</li>
+            </ul>
+          </div>
+
+          <div class="col-md-6">
+            <h5>ABILITIES: </h5>
+            <ul>
+              <li *ngFor="let ability of pokemon.abilities">{{ability}}</li>
+            </ul>
+          </div>
+
+        </div>
+
+        <div class="row">
+          
+          <div class="col-md-12">
+            <h5>MOVES: </h5>
+            <ul style="column-count: 4;">
+              <li *ngFor="let move of pokemon.moves">{{move}}</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+    <div class="card-footer">
+      
+    </div>
+  </div>
+</div>
