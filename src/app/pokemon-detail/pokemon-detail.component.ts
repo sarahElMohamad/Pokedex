@@ -54,6 +54,7 @@ export class PokemonDetailComponent implements OnInit {
         })
       });
     });
+    window.scrollTo(0, 0);
   }
 
 }

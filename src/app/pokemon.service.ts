@@ -6,11 +6,11 @@ export class PokemonService {
 
   constructor(private http:Http) { }
 
-  public getPokemonList(){
+  public getPokemonList(url: string = 'https://pokeapi.co/api/v2/pokemon?limit=10&offset=0'){
 
-    return this.http.get('https://pokeapi.co/api/v2/pokemon?limit=100&offset=200')
+    return this.http.get(url)
     .toPromise()
-    .then((res:Response) => res.json().results);
+    .then((res:Response) => res.json());
 
   }
 

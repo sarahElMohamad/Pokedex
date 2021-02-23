@@ -13,4 +13,14 @@
       </tr>
     </tbody>
   </table>
+  <nav>
+    <ul class="pagination justify-content-center">
+      <li class="page-item">
+        <button class="btn btn-outline-primary" [disabled]="previous == null" (click)="getNextOrPrevious(previous)">Previous</button>
+      </li>
+      <li class="page-item">
+        <button class="btn btn-outline-primary" [disabled]="next == null" (click)="getNextOrPrevious(next)">Next</button>
+      </li>
+    </ul>
+  </nav>
 </div>

@@ -8,13 +8,26 @@ import { PokemonService } from '../pokemon.service';
 })
 export class PokemonListComponent implements OnInit {
 
-  pokemonList;
+  pokemonList: Array<Object>;
+  next: string;
+  previous: string;
 
   constructor(public pokemonService:PokemonService) { }
 
   ngOnInit() {
     this.pokemonService.getPokemonList().then(pokemons => {
-      this.pokemonList = pokemons;
+      this.next = pokemons.next;
+      this.previous = pokemons.previous;
+      this.pokemonList = pokemons.results;
+    });
+  }
+
+  public getNextOrPrevious(url:string){
+    this.pokemonService.getPokemonList(url).then(pokemons => {
+      this.next = pokemons.next;
+      this.previous = pokemons.previous;
+      this.pokemonList = pokemons.results;
+      window.scrollTo(0, 0);
     });
   }
 
