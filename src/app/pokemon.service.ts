@@ -26,4 +26,10 @@ export class PokemonService {
     .then((res:Response) => res.json().evolution_chain.url);
   }
 
+  public getEvolutionChain(url:string){
+    return this.http.get(url)
+    .toPromise()
+    .then((res:Response) => res.json());
+  }
+
 }

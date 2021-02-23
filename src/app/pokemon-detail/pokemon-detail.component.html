@@ -1,7 +1,7 @@
 <div class="container">
   <a class="btn btn-primary" style="margin-bottom: 20px;" [routerLink]="['/pokemon-list']">Back to list</a>
   <div class="card">
-    <h3 class="card-header card-title">{{pokemon.name}}</h3>
+    <h3 class="card-header">{{pokemon.name}}</h3>
     <div class="card-body">
 
       <div style="margin-left: 5%">
@@ -39,7 +39,14 @@
 
     </div>
     <div class="card-footer">
-      
+      <ol style="column-count: 6;">
+        <li *ngFor="let name of pokemon.evolutionChain">
+          <a class="btn btn-primary" [routerLink]="['/pokemon', name]" (click)="getPokemonDetail(name)">{{name}}</a>
+        </li>
+      </ol>
+      <div *ngIf="!pokemon.evolutionChain">
+        <p>No evolution for this Pokemon</p>
+      </div>
     </div>
   </div>
 </div>

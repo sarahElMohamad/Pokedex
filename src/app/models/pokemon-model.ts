@@ -4,6 +4,5 @@ export class Pokemon{
     types: Array<string>;
     abilities: Array<string>;
     moves: Array<string>;
-    speciesURL: string;
-    evolutionChainURL: string; 
+    evolutionChain: Array<string>; 
 }
